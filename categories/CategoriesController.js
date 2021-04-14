@@ -8,7 +8,7 @@ router.get("/admin/categories/new", (req,res) => {
     res.render("admin/categories/new");
 });
 
-//funcção post salvar categoria
+//funcção POST salvar categorias
 router.post("/categories/save", (req,res) => {
     var title = req.body.title;
     if(title != undefined){
@@ -23,7 +23,7 @@ router.post("/categories/save", (req,res) => {
     };
 });
 
-//model recebendo categories
+//model recebendo categories do BD
 router.get("/admin/categories", (req, res) => {
     Category.findAll().then(categories => {
         res.render("admin/categories/index", {categories: categories});
@@ -31,7 +31,7 @@ router.get("/admin/categories", (req, res) => {
 });
 
 
-//rota deletar categoria
+//rota deletar categoria + função deletar categoria
 router.post("/categories/delete", (req, res) => {
     var id = req.body.id;
     if(id != undefined){//se não for indefinido
@@ -51,5 +51,22 @@ router.post("/categories/delete", (req, res) => {
     };
 });
 
+
+//Rota e Função editar categoria
+router.get("/admin/categories/edit/:id", (req, res) => {
+    var id = req.params.id;
+    if(isNaN(id)){
+        res.redirect("/admin/categories");
+    }
+    Category.findByPk(id).then(category => {
+        if(category != undefined){
+            res.render("admin/categories/edit", {category: category});
+        }else{
+            res.redirect("admin/categories");
+        }
+    }).catch(erro => {
+        res.redirect("admin/categories");
+    })
+});
 
 module.exports = router;
