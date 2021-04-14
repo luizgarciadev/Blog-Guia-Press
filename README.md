@@ -4,13 +4,13 @@
 A Plataforma Blog Guia Press, como o nome diz, é um blog onde é possivel criar determinadas categorias e nelas serão cadastrados artigos.
 
 ### Funcionalidades:
-Sistema de Login
-Painel administrativo
-Editor de texto
+- Sistema de Login
+- Painel administrativo
+- Editor de texto
 
  ### Objetos de estudo:
 Esse projeto tem o objeto de estudar desenvolvimento Javascript em NodeJS, onde será estudado os conceitos de 
-bando de dados relacionais, roteamento e arquitetura de software, metodo de login, javascript, express, ejs, bootstrap entre outros recursos.
+manipulação de bando de dados relacionais, roteamento e arquitetura de software, metodo de login, javascript, express, ejs, bootstrap entre outros recursos.
 
 ### Tecnologias de estudo:
 - Node, Express e dependências
