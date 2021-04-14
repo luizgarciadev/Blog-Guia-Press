@@ -16,7 +16,7 @@ router.post("/categories/save", (req,res) => {
             title: title,
             slug: slugify(title)
         }).then(() => {
-            res.redirect("/");
+            res.redirect("/admin/categories");
         });
     }else{
         res.redirect("/admin/categories/new");
@@ -32,7 +32,7 @@ router.get("/admin/categories", (req, res) => {
 
 
 //rota deletar categoria
-router.post("/categories/delete", (req,res) => {
+router.post("/categories/delete", (req, res) => {
     var id = req.body.id;
     if(id != undefined){//se não for indefinido
         if(!isNaN(id)){//se não for numero
@@ -42,13 +42,13 @@ router.post("/categories/delete", (req,res) => {
                 }
             }).then(() => {
                 res.redirect("/admin/categories");
-            });
+            }); 
         }else{//não for um numero
             res.redirect("/admin/categories");
-        }
+        };
     }else{//não for indefinido
         res.redirect("/admin/categories");
-    }
+    };
 });
 
 
