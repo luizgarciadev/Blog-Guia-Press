@@ -74,3 +74,11 @@ typings/
 
 # FuseBox cache
 .fusebox/
+*.md
+public/tinymce/skins/ui/oxide/skin.mobile.min.css
+public/tinymce/icons/default/icons.min.js
+public/tinymce/jquery.tinymce.min.js
+public/tinymce/langs/pt_BR.js
+public/tinymce/plugins/advlist/plugin.min.js
+public/tinymce/plugins/anchor/plugin.min.js
+public/tinymce/plugins/autolink/plugin.min.js
