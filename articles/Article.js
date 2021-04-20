@@ -1,10 +1,9 @@
-//model article
 const Sequelize = require("sequelize");
-const Category = require("../categories/Category");
 const connection = require("../database/database");
+const Category = require("../categories/Category");
 
-const Article = connection.define("article", {
-    title: {
+const Article = connection.define('articles',{
+    title:{
         type: Sequelize.STRING,
         allowNull: false
     },slug: {
@@ -15,13 +14,9 @@ const Article = connection.define("article", {
         type: Sequelize.TEXT,
         allowNull: false
     }
-});
+})
 
-//relacionamento de article com category
-Category.hasMany(Article);
-Article.belongsTo(Category);
-
-//Criar tabela de relacionamento no BD
-//Article.sync({force: true});
+Category.hasMany(Article); // UMA Categoria tem muitos artigos
+Article.belongsTo(Category); // UM Artigo pertence a uma categoria
 
 module.exports = Article;
