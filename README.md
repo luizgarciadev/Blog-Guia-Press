@@ -29,6 +29,6 @@ Endereço: https://guiadoprogramador.eadplataforma.com/
 ### Para testar o sistema:
 - NodeJS e Mysql instalados no computador, mais informações de como instalar consulte:  https://nodejs.org/en/ e https://mysql.com/
 - Navegador compátivel com HTML 5
-- Utilizar o comando node index.js e acessar o endereço localhost:8080 do seu navegador
+- Utilizar o comando node index.js e acessar o endereço localhost:3030 do seu navegador
 
 ### Prototipagem:
